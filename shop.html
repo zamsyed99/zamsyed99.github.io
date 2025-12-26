@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>T-Shirt Store</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<h1>Our T-Shirts</h1>
-
-<div id="products"></div>
-
 <script src="js/products.js"></script>
 <script src="js/cart.js"></script>
 
 <script>
+  console.log(products); // Debug: should show all 3 products
+
   const container = document.getElementById("products");
 
   products.forEach(p => {
@@ -28,6 +18,3 @@
     `;
   });
 </script>
-
-</body>
-</html>
