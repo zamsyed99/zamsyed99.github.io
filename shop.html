@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test Shop Page</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .product { border: 1px solid #ccc; padding: 10px; margin-bottom: 15px; }
-  </style>
+  <title>T-Shirt Store</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Test T-Shirt Store</h1>
+<h1>Our T-Shirts</h1>
 
-<div id="products">
-  <div class="product">
-    <h2>Sample T-shirt</h2>
-    <img src="images/tshirts/tshirt1.jpg" alt="Sample T-shirt" style="width:200px;">
-    <p>Price: ₹499</p>
-    <button onclick="alert('Added to cart')">Add to Cart</button>
-  </div>
-</div>
+<div id="products"></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+
+<script>
+  const container = document.getElementById("products");
+
+  products.forEach(p => {
+    container.innerHTML += `
+      <div class="product">
+        <img src="${p.image}" alt="${p.name}" style="width:200px; border-radius: 8px;">
+        <h3>${p.name}</h3>
+        <p>${p.description}</p>
+        <strong>₹${p.price}</strong><br><br>
+        <button onclick="addToCart(${p.id})">Add to Cart</button>
+      </div>
+    `;
+  });
+</script>
 
 </body>
 </html>
-
