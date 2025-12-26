@@ -21,4 +21,3 @@ const products = [
     description: "Trendy street style"
   }
 ];
-
