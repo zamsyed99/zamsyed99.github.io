@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>T-Shirt Store</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Our T-Shirts</h1>
+
+<div id="products"></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+
+<script>
+const container = document.getElementById("products");
+
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product">
+      <img src="${p.image}">
+      <h3>${p.name}</h3>
+      <p>${p.description}</p>
+      <strong>₹${p.price}</strong><br><br>
+      <button onclick="addToCart(${p.id})">Add to Cart</button>
+    </div>
+  `;
+});
+</script>
+
+<a class="order-btn" href="https://wa.me/91XXXXXXXXXX">Order on WhatsApp</a>
+
+</body>
+</html>
 
