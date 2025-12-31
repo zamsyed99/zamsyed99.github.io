@@ -1,43 +1,99 @@
+/* Google Font */
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f5f5f5;
 }
 
-#products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+/* Navigation */
+.navbar {
+  background: rgba(0,0,0,0.85);
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.product {
-  border: 1px solid #ddd;
-  padding: 15px;
-  border-radius: 10px;
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff6600;
+}
+
+/* Hero Section */
+.hero {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   text-align: center;
 }
 
-.product img {
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.product-card img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 button {
-  background: black;
+  background: #ff6600;
   color: white;
-  padding: 10px;
   border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-.order-btn {
-  display: block;
-  margin: 30px auto;
-  text-align: center;
-  background: green;
-  color: white;
-  padding: 15px;
-  width: 200px;
-  text-decoration: none;
-  border-radius: 8px;
+button:hover {
+  background: #e65c00;
 }
-
