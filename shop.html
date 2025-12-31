@@ -1,20 +1,38 @@
-<script src="js/products.js"></script>
-<script src="js/cart.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 
-<script>
-  console.log(products); // Debug: should show all 3 products
+  <h1>Shop</h1>
 
-  const container = document.getElementById("products");
+  <!-- IMPORTANT: This container is required -->
+  <div id="products"></div>
 
-  products.forEach(p => {
-    container.innerHTML += `
-      <div class="product">
-        <img src="${p.image}" alt="${p.name}" style="width:200px; border-radius: 8px;">
-        <h3>${p.name}</h3>
-        <p>${p.description}</p>
-        <strong>₹${p.price}</strong><br><br>
-        <button onclick="addToCart(${p.id})">Add to Cart</button>
-      </div>
-    `;
-  });
-</script>
+  <!-- JS files -->
+  <script src="./js/products.js"></script>
+  <script src="./js/cart.js"></script>
+
+  <script>
+    console.log(products); // Debug
+
+    const container = document.getElementById("products");
+
+    products.forEach(p => {
+      container.innerHTML += `
+        <div class="product">
+          <img src="${p.image}" alt="${p.name}" style="width:200px; border-radius:8px;">
+          <h3>${p.name}</h3>
+          <p>${p.description}</p>
+          <strong>${p.price}</strong><br><br>
+          <button onclick="addToCart(${p.id})">Add to Cart</button>
+        </div>
+      `;
+    });
+  </script>
+
+</body>
+</html>
