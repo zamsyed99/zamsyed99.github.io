@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    name: "Classic Black T-Shirt",
+    name: "Classic White T-Shirt",
     price: ₹499,
     image: "images/tshirts/tshirt1.jpg",
     description: "100% cotton premium quality"
