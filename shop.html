@@ -2,37 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Citytees</title>
+  <title>Shop - My Store</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-  <h1>My Citytees</h1>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
 
-  <!-- IMPORTANT: This container is required -->
-  <div id="products"></div>
+<header class="hero" style="background-image: url('./images/hero-shop.jpg');">
+  <h1>Shop Our Collection</h1>
+</header>
 
-  <!-- JS files -->
-  <script src="./js/products.js"></script>
-  <script src="./js/cart.js"></script>
+<div class="product-grid" id="products"></div>
 
-  <script>
-    console.log(products); // Debug
+<script src="./js/products.js"></script>
+<script src="./js/cart.js"></script>
+<script>
+const container = document.getElementById("products");
 
-    const container = document.getElementById("products");
+products.forEach(p => {
+  container.innerHTML += `
+    <div class="product-card">
+      <img src="${p.image}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.description}</p>
+      <strong>${p.price}</strong><br>
+      <button onclick="addToCart(${p.id})">Add to Cart</button>
+    </div>
+  `;
+});
+</script>
 
-    products.forEach(p => {
-      container.innerHTML += `
-        <div class="product">
-          <img src="${p.image}" alt="${p.name}" style="width:200px; border-radius:8px;">
-          <h3>${p.name}</h3>
-          <p>${p.description}</p>
-          <strong>${p.price}</strong><br><br>
-          <button onclick="addToCart(${p.id})">Add to Cart</button>
-        </div>
-      `;
-    });
-  </script>
+<footer>
+  <p>&copy; 2025 My Store. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
