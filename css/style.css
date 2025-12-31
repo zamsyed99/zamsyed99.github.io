@@ -37,7 +37,7 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 60vh;                 /* Responsive height */
+  height: 100vh;                 /* Responsive height */
   background-size: cover;        /* Cover full container */
   background-position: center;   /* Center image */
   background-repeat: no-repeat;
