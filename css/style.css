@@ -1,4 +1,4 @@
-/* Google Font */
+/* Global Styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -7,7 +7,7 @@ body {
   background: #f5f5f5;
 }
 
-/* Navigation */
+/* Navigation Bar */
 .navbar {
   background: rgba(0,0,0,0.85);
   padding: 10px 30px;
@@ -37,24 +37,24 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 400px;
-  background-size: cover;
-  background-position: center;
+  height: 60vh;                 /* Responsive height */
+  background-size: cover;        /* Cover full container */
+  background-position: center;   /* Center image */
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
   text-align: center;
+  flex-direction: column;
 }
 
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+/* Section Styling */
+section {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 /* Product Grid */
@@ -84,6 +84,7 @@ footer {
   border-radius: 10px;
 }
 
+/* Buttons */
 button {
   background: #ff6600;
   color: white;
@@ -96,4 +97,24 @@ button {
 
 button:hover {
   background: #e65c00;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive text */
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 }
