@@ -8,7 +8,7 @@ const products = [
   },
   {
     id: 2,
-    name: "White Oversized T-Shirt",
+    name: "Black Oversized T-Shirt",
     price: "₹599",
     image: "./images/tshirts/tshirt2.jpg",
     description: "Comfort fit, breathable fabric"
